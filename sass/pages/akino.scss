@@ -14,9 +14,9 @@
         left: 0;
         right: 0;
         bottom: 0;
-        height: 310px;
+        height: 300px;
         opacity: 0;
-        overflow: hidden;
+        overflow: visible;
         border: 0px solid rgba(0, 0, 0, 0.7);
         box-sizing: border-box;
         transition: all 0.4s ease-in-out;
@@ -33,7 +33,7 @@
 
     &:hover .mask{
         opacity: 1;
-        border: 100px solid rgba(0, 0, 0, 0.7);
+        border: 150px solid rgba(0, 0, 0, 0.7);
     }
 
     &:hover a .caption{
@@ -86,7 +86,7 @@ h1{
 }
 
 @mixin image ($size) {
-    margin: 5px;
+    // margin: 5px;
     height: $size;
     width: $size;
 }
