@@ -11,6 +11,20 @@
     <link rel="stylesheet" href="css/pages/akino.css">
 </head>
 <body>
+    <!-- header -->
+    <div class="container"></div>
+    <header>
+        <ul>
+            <p>JustinBieber</p>
+            <div class="list">
+                <li><a href="#">HOME</a></li>
+                <li><a href="sakura.html">HISTORY</a></li>
+                <li><a href="motoki.html">DISCOGRAPHY</a></li>
+                <li><a href="lina.html">SCANDAL</a></li>
+            </div>
+        </ul>
+    </header>
+
     <!-- top -->
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -39,23 +53,33 @@
 
     <!-- main -->
     <div class="image-box">
-        <div class="his-img">
-            <img class="image" src="img/history.jpg" alt="">
-            <div class="mask">
-                <a href="#" class="caption" title="Full Image">HISTORY</a>
-            </div>
+        <div class="img-mask">
+            <div>
+                <a href="sakura.html" class="caption" title="Full Image">
+                    <img class="image" src="img/history.jpg" alt="">
+                    <p class="mask">HISTORY</p>
+                </a>
+            </div> 
         </div>
         <div>
             <img class="second-img" src="img/_1.jpg" alt="">
         </div>
-        <div>
-            <img class="image" src="img/justin-bieber-mtv-emas-2015-show-1445810523-custom-0.jpg" alt="">
+        <div class="img-mask">
+            <a href="motoki.html">
+                <img class="image" src="img/justin-bieber-mtv-emas-2015-show-1445810523-custom-0.jpg" alt="">
+                <p class="mask">AWORD</p>
+            </a>
         </div>
         <div>
-            <a href="https://thehouseofdrew.com/"><img class="second-img" src="img/29-house-of-drew.w700.h700.jpg" alt=""></a>
+            <a href="https://thehouseofdrew.com/">
+                <img class="second-img" src="img/29-house-of-drew.w700.h700.jpg" alt="">
+            </a>
         </div>
-        <div>
-            <img class="image" src="img/scandal.jpeg" alt="">
+        <div class="img-mask"> 
+            <a href="lina.html">
+                <img class="image" src="img/scandal.jpeg" alt="">
+                <p class="mask">SCANDAL</p>
+            </a>
         </div>
     </div>
 
@@ -81,7 +105,7 @@
                 </select>
             </div>
             <div class="check">
-                <input id="check-box" class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <input id="check-box" class="form-check-input" type="checkbox" value="" id="defaultCheck1" name="is">
                 <label class="form-check-label" for="defaultCheck1">
                     Subscribe me to the Justin Bieber newsletter 
                 </label>
