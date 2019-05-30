@@ -1,16 +1,64 @@
+// @import "./base/reset.css";
+
+// @import "./base/**";
+
+// @import "../modules/**";
+
+
+@mixin h2($h2color) {
+    // box-shadow: 0 0 8px (rgb(0, 255, 255);
+    padding: 10px;
+    // background-color:#fff;
+    color: $h2color;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff, 3px 3px 0 #999;
+}
+body {
+    // background-color: darken(grey,5%);
+    background-image: url(../../img/Best-Cool-Justin-Bieber-Wallpaper-HD.jpg);
+}
 
 .main {
     margin: 0 auto;
     width: 900px;
+    h2 {
+        @include h2(steelblue);
+        span {
+            color: blue;
+        }
+    }
+    p {
+        color: #fff;
+        padding-left: 10px;
+        font-family: segoe script;
+        margin: 20px 0 ;
+        span {
+            color: yellow;
+        }
+    }
 }
-.main h2 {
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
-    border-left: 3px solid black;
-    padding: 10px;
+.img img {
+   width: 80%;
+   padding-left: 20%;
+   margin-top: 20px;
 }
- 
+.center {
+    text-align: center;
+}
+
 .video {
+    padding-top: 50px;
     margin: 0 auto;
     width: 600px;
+}
+.container h1 {
+    @include h2(rgba(51, 238, 66, 0.705));
+    text-align: center;
+}
+
+.card img {
+    &:hover {
+        transform: scale(1.2,1.2);
+    }
+
 }
