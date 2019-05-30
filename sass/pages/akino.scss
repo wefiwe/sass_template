@@ -1,4 +1,8 @@
-// @import "/sass/modules/_header.scss";
+@import "../base/_reset";
+
+@import "../base/**";
+
+@import "../modules/**";
 
 // top
 .size{
@@ -6,7 +10,7 @@
 }
 
 //main
-.his-img{
+.img-mask{
     position: relative;
     .mask{
         position: absolute;
@@ -14,12 +18,12 @@
         left: 0;
         right: 0;
         bottom: 0;
-        height: 300px;
-        widows: 300px;
+        // height: 300px;
+        // width: 300px;
         opacity: 0;
-        overflow: hidden;
-        border: 0px solid rgba(0, 0, 0, 0.7);
-        // box-sizing: border-box;
+        overflow: visible;
+        border: 0px solid rgba(255, 215, 0, 0.7);
+        box-sizing: border-box;
         transition: all 0.4s ease-in-out;
     }
    
@@ -29,24 +33,30 @@
         opacity: 0;
         transform: scale(0,0);
         transition: transform 0.2s ease-in, opacity 0.1s ease-in-out;
+
     }
 
     &:hover .mask{
         opacity: 1;
-        border: 100px solid rgba(0, 0, 0, 0.7);
+        border: 150px solid rgba(255, 215, 0, 0.7);
+        font-size: 30px;
+        font-weight: bold;
     }
 
     &:hover a .caption{
         opacity: 1;
-        transform: scale(1,1);
+        transform: scale(0,0);
         transition-delay: 0.3s;
+        right: 20px;
     }
 }
+
+
 
 //form
 .form{
     background: rgb(243, 129, 243);
-    height: 500px;
+    height: 450px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -82,10 +92,11 @@ h1{
 .image-box {
     display: flex;
     justify-content: center;
+    background-color: black;
 }
 
 @mixin image ($size) {
-    margin: 5px;
+    // margin: 5px;
     height: $size;
     width: $size;
 }
