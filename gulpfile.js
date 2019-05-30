@@ -3,7 +3,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sassGlob = require('gulp-sass-glob'); //パーシャルをまとめて読み込む ①
-var sourcemaps = require('gulp-sourcemaps'); // source map作成 ②
+var sourcemaps = require('gulp-sourcemaps'); // source map作成 ②　ディベロッパーツールで見た時に、sassでおかしい行を記述
 var autoprefixer = require('gulp-autoprefixer'); // ベンダープレフィックス ③
 var cleanCSS = require('gulp-clean-css'); // minify ④
 var rename = require('gulp-rename'); //ファイル名変更 ⑤
