@@ -6,10 +6,124 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>テンプレート</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/pages/akino.css">
 </head>
 <body>
-    
+    <!-- header -->
+    <div class="container"></div>
+    <header>
+        <ul>
+            <p>JustinBieber</p>
+            <div class="list">
+                <li><a href="#">HOME</a></li>
+                <li><a href="sakura.html">HISTORY</a></li>
+                <li><a href="motoki.html">DISCOGRAPHY</a></li>
+                <li><a href="lina.html">SCANDAL</a></li>
+            </div>
+        </ul>
+    </header>
+
+    <!-- top -->
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="https://www.youtube.com/watch?v=y83x7MgzWOA"><img src="./img/idc.jpg" class="d-block w-100 size" alt="..."></a>
+            </div>
+            <div class="carousel-item">
+                <a href="https://www.youtube.com/watch?v=weeI1G46q0o"><img src="./img/DJ-Khaled-Im-The-One.jpg" class="d-block w-100 size" alt="..."></a>
+            </div>
+            <div class="carousel-item">
+                <a href="https://www.youtube.com/watch?v=3X3xtRNb20s"><img src="./img/2u.png" class="d-block w-100 size" alt="..."></a>
+            </div>
+            <div class="carousel-item">
+                <a href="https://www.youtube.com/watch?v=zoYgCg6i9C8"><img src="./img/despacito.jpg" class="d-block w-100 size" alt="..."></a>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+    <!-- main -->
+    <div class="image-box">
+        <div class="img-mask">
+            <div>
+                <a href="sakura.html" class="caption" title="Full Image">
+                    <img class="image" src="img/history.jpg" alt="">
+                    <p class="mask">HISTORY</p>
+                </a>
+            </div> 
+        </div>
+        <div>
+            <img class="second-img" src="img/_1.jpg" alt="">
+        </div>
+        <div class="img-mask">
+            <a href="motoki.html">
+                <img class="image" src="img/justin-bieber-mtv-emas-2015-show-1445810523-custom-0.jpg" alt="">
+                <p class="mask">AWORD</p>
+            </a>
+        </div>
+        <div>
+            <a href="https://thehouseofdrew.com/">
+                <img class="second-img" src="img/29-house-of-drew.w700.h700.jpg" alt="">
+            </a>
+        </div>
+        <div class="img-mask"> 
+            <a href="lina.html">
+                <img class="image" src="img/scandal.jpeg" alt="">
+                <p class="mask">SCANDAL</p>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- form -->
+    <section class="form">
+        <h1>JOIN THE NEWSLETTER AND STAY UP TO DATA</h1>
+        <form>
+            <div class="form-group">
+                <input type="email" placeholder="E-mail">
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Name">
+            </div>
+            <div> 
+                 <select class="options">
+                    <option>Country</option>
+                    <option>United state of America</option>
+                    <option>Japan</option>
+                    <option>Canada</option>
+                    <option>Australia</option>
+                    <option>Italy</option>
+                </select>
+            </div>
+            <div class="check">
+                <input id="check-box" class="form-check-input" type="checkbox" value="" id="defaultCheck1" name="is">
+                <label class="form-check-label" for="defaultCheck1">
+                    Subscribe me to the Justin Bieber newsletter 
+                </label>
+            </div>
+            <div class="button">
+                <button type="button" class="btn btn-outline-danger checkbtn" disabled>SIGH UP</button>
+            </div>
+        </form>
+
+        <!-- icon -->
+        <a href="https://twitter.com/justinbieber"><i class="fab fa-twitter-square fa-3x"></i></a>
+        <a href="https://www.instagram.com/justinbieber/?hl=ja"><i class="fab fa-instagram fa-3x"></i></a>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./assets/js/akino.js"></script>
 </body>
 </html>
