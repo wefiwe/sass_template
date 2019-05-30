@@ -1,0 +1,129 @@
+
+@import "./base/**";
+
+@import "./modules/**";
+
+
+$hcolor:black;
+$bgColor:rgb(158, 158, 158);
+$bordercolor:rgb(250, 234, 142);
+
+.container {
+    background-color: $bgColor;
+}
+main {
+    padding:100px 0;
+    display: flex;
+    flex-direction: row;
+    height: 1000px;
+
+    h1 {
+        color:$hcolor;
+        margin:30px 0px;
+        font-size:40px;
+        font-family: monospace;
+    }
+    p {
+        margin:20px 0;
+        font-size:20px;
+
+
+    }
+
+    .left {
+
+        background-color:$bgColor;
+        width: 70%;
+        padding:0 40px;
+
+        .shtx {
+            margin:30px 0;
+
+            display: flex;
+            justify-content: center;
+            p {
+                height: 300px;
+                width: 300px;
+                margin:20px 20px;
+                font-size:15px;
+
+                
+            }
+        }
+        
+        img {
+            height: 300px;
+            width: 300px;
+            object-fit: contain;
+            border:solid $bordercolor 2px;
+        }
+
+
+    }
+
+
+
+    .right {
+        margin:10px 0;
+        position: fixed;
+        height: 100px;
+        width: 100%;
+        right: 0;
+
+        width: 30%;   
+        background-color:#1e5672;   
+
+        ul {
+            width: 100%;
+            background-color:rgb(175, 138, 87);
+
+            li {
+                @mixin a($bgColor, $textColor) {
+                    color: $textColor;
+                    padding: 5px 10px;
+                    background-color: $bgColor;
+                }
+
+                @include a(rgb(231, 223, 175), black);
+
+                padding:0 10px;
+                height: 70px;
+                display: flex;
+                align-items: center;
+
+                &:hover {
+                    background-color:rgb(216, 200, 176);
+
+                    &:nth-child(1) {
+                        background-color:rgb(231, 223, 175);
+                    }
+                }
+
+                
+                span {
+                    font-weight: bold;
+                }
+
+                img {
+                    height: 50px;
+                    width: 50px;
+                    padding: 10px;
+                    object-fit: cover;
+                }
+
+                
+                
+                a {
+                    padding:20px 10px;
+                    font-size: 20px;
+                    text-decoration: none;
+                    width: 200px;
+                    color:rgb(68, 68, 68);
+                }
+            }
+        }
+    }
+
+
+}
+
