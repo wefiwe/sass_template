@@ -5,6 +5,7 @@ body{
 header {
     
     p {
+        font-family: 'Chalkduster',sans-serif;
         color: white;
         margin-left:20px;
         font-weight: bold;
@@ -38,6 +39,7 @@ header {
         // justify-content: center;
     }
     a {
+        font-family: 'Chalkduster',sans-serif;
         text-decoration: none;
         color:white;
         padding:20px 5px;
@@ -53,6 +55,7 @@ $baseColor: white;
 main{
     margin-top: 100px;
     h1{
+        font-family: 'Chalkduster',sans-serif;
         color: $baseColor;
         border-bottom: solid 2px;
         border-image: linear-gradient(to right, green 0%, blue 100%);
@@ -69,6 +72,7 @@ main{
     }
 
     .text{
+        // background: linear-gradient(purple, blue);
         p{
             padding: 40px;
             text-align: center;
@@ -82,16 +86,4 @@ main{
     
 }
 
-$breakpoints: (
-    xs: "only screen and (max-width: 320px)",
-    s: "only screen and (max-width: 575px)",
-    m: "only screen and (max-width: 768px)",
-    l: "only screen and (max-width: 991px)",
-    xl: "only screen and (max-width: 1199px)",
-);
 
-@mixin media($breakpoint) {
-    @media #{map-get($breakpoints, $breakpoint)} {
-        @content;
-    }
-}
