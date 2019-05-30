@@ -122,8 +122,26 @@ main {
                 }
             }
         }
+
+
     }
 
 
 }
 
+
+// ページトップに戻るやつ
+.toTop {
+    bottom: 0;
+    left:0;
+    margin-top: 400px;
+    display: inline-block;
+    background: #0bd;
+    padding: 15px;
+    color: #fff;
+    cursor: pointer;
+  }
+  body {
+    font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Meiryo,"メイリオ",Helvetica,Sans-Serif;
+  }
+// ページトップに戻るやつ
