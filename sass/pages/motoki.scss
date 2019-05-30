@@ -1,14 +1,14 @@
+body{
+    background-color: black;
+}
+
 header {
-    position: fixed;
-    height: 100px;
-    width: 100%;
-    z-index: 20;
+    
     p {
         font-family: 'Chalkduster',sans-serif;
         color: white;
         margin-left:20px;
         font-weight: bold;
-
     }
     
     ul {
@@ -23,38 +23,67 @@ header {
         font-size: 30px;
         // margin:0 20px;
     }
-
     li {
         text-align: center;
         font-weight: bold;
-
         
         &:hover {
             background-color: black;
             
-
         }
     }
-
-
     .list {
         display: flex;
         flex-direction: row;
         align-items: center;
         // justify-content: center;
     }
-
     a {
         font-family: 'Chalkduster',sans-serif;
         text-decoration: none;
         color:white;
         padding:20px 5px;
-
-
         &:hover {
             color: rgb(0, 0, 0);
             background-color: rgb(255, 255, 255);
         }
-
     }
 }
+
+$baseColor: white;
+
+main{
+    margin-top: 100px;
+    h1{
+        font-family: 'Chalkduster',sans-serif;
+        color: $baseColor;
+        border-bottom: solid 2px;
+        border-image: linear-gradient(to right, green 0%, blue 100%);
+        border-image-slice: 1;
+        padding: 30px;
+        font-size: 30px;
+    }
+
+    .photo{
+        float: left;
+        padding: 40px;
+        width: 450px;
+        height: 600px;
+    }
+
+    .text{
+        // background: linear-gradient(purple, blue);
+        p{
+            padding: 40px;
+            text-align: center;
+            color: $baseColor;
+            font-size: 19px;
+            letter-spacing: 0.1em;
+            line-height: 1.5em;
+        }
+    }
+   
+    
+}
+
+
