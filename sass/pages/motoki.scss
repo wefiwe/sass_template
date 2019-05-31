@@ -52,6 +52,8 @@ header {
 
 $baseColor: white;
 
+
+
 main{
     margin-top: 100px;
     h1{
@@ -65,13 +67,14 @@ main{
     }
 
     .photo{
-        float: left;
-        padding: 40px;
+        // float: left;
+        padding: 80px;
         width: 450px;
         height: 600px;
     }
 
     .text{
+        
         // background: linear-gradient(purple, blue);
         p{
             padding: 40px;
