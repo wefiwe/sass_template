@@ -1,4 +1,6 @@
-// @import "/sass/modules/_header.scss";
+@import "../base/_reset";
+@import "../base/**";
+@import "../modules/**";
 
 // top
 .size{
@@ -6,7 +8,33 @@
 }
 
 //main
-.his-img{
+.image-box {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+@mixin image ($size) {
+    height: $size;
+    width: $size;
+}
+
+.image{
+    @include image(300px);
+}
+
+@mixin second-img($imgSize) {
+    margin: 5px;
+    margin-top: 50px;
+    height: $imgSize;
+    width: $imgSize;
+}
+
+.second-img {
+    @include second-img(200px);
+}
+
+.img-mask{
     position: relative;
     .mask{
         position: absolute;
@@ -14,39 +42,59 @@
         left: 0;
         right: 0;
         bottom: 0;
-        height: 300px;
-        widows: 300px;
         opacity: 0;
-        overflow: hidden;
-        border: 0px solid rgba(0, 0, 0, 0.7);
-        // box-sizing: border-box;
+        overflow: visible;
+        border: 0px solid rgba(255, 215, 0, 0.7);
+        box-sizing: border-box;
         transition: all 0.4s ease-in-out;
-    }
-   
-    a .caption{
-        position: relative;
-        top: -10px;
-        opacity: 0;
-        transform: scale(0,0);
-        transition: transform 0.2s ease-in, opacity 0.1s ease-in-out;
     }
 
     &:hover .mask{
         opacity: 1;
-        border: 100px solid rgba(0, 0, 0, 0.7);
+        border: 150px solid rgba(255, 215, 0, 0.7);
+        font-size: 30px;
+        font-weight: bold;
     }
 
-    &:hover a .caption{
-        opacity: 1;
-        transform: scale(1,1);
-        transition-delay: 0.3s;
+    .caption{
+        margin-left: -10px;
     }
 }
+
+.second-mask{
+    position: relative;
+
+    .small-mask{
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        overflow: visible;
+        border: 0px solid rgba(100, 200, 100, 0.7);
+        box-sizing: border-box;
+        transition: all 0.4s ease-in-out;
+        height: 100px;
+    }
+   
+
+    &:hover .small-mask{
+        opacity: 1;
+        border: 105px solid rgba(106, 216, 78, 0.7);
+        font: {
+            size: 20px;
+            weight: bold; 
+        }
+    }
+}
+
+
 
 //form
 .form{
     background: rgb(243, 129, 243);
-    height: 500px;
+    height: 450px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -79,29 +127,6 @@ h1{
     border-bottom: 1px solid black;
 }
 
-.image-box {
-    display: flex;
-    justify-content: center;
-}
 
-@mixin image ($size) {
-    margin: 5px;
-    height: $size;
-    width: $size;
-}
 
-.image{
-    @include image(300px);
-}
-
-@mixin second-img($imgSize) {
-    margin: 5px;
-    margin-top: 50px;
-    height: $imgSize;
-    width: $imgSize;
-}
-
-.second-img {
-    @include second-img(200px);
-}
 
