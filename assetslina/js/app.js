@@ -87,6 +87,31 @@ $(function () {
     });
 
 
+    // 問3
+    $('.answer3').fadeOut();
+
+
+    $('input').one('click', function () {
+
+        if ($(this).val() == 2) {
+            $('.seikai3').remove();
+
+            $('.answer3').fadeOut();
+
+
+            // alert('正解！');
+            $('.answer3').append('<img src="../assetslina/img/tamagonage.jpg" alt="">').hide().fadeIn('slow');
+            $('.nextlink3').append('<p>アタリだよ！</br>ジャスティン・ビーバーが隣人の家に大量の卵を投げつけた事件で、ジャスティンが司法取引をし、2年間の執行猶予とアンガーマネージメントを受けるよう言い渡された。被害者には8万900ドル（約809万円）を支払うよう命ぜられたとのこと。</p>').hide().fadeIn('slow');
+            $('.nextlink3').append('<a href="../article/article3.html">次のスキャンダルを見る</a>').hide().fadeIn('slow');
+
+        } else {
+
+
+            alert('はずれだよ　もう一度で直してこい');
+
+            $('radio').prop('disabled', false);
+        }
+    });
 
 
 

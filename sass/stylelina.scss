@@ -22,49 +22,26 @@ $breakpoints: (
     }
 }
 
-.test1 {
-    height: 300px;
-    @include media(xs) {
-        height: 200px;
-        width: 500px;
-    };
-
-    @include media(xl) {
-        height: 500px;
-    }
-}
-
-// レスポンシブ対応完
-
-header {
-
-    ul {
-    @include media(s) {
-
-        // height: 30px;
-        font-size:14px;        
-    
-    }
-}
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 $hcolor:rgb(253, 253, 253);
 $bgColor:#1C1A20;
 $bordercolor:rgb(250, 234, 142);
 $quizcolor:rgba(44, 189, 189, 0.2);
+
+
+// ヘッダー
+header {
+
+    ul {
+        @include media(s) {
+            font-size:14px;        
+        }
+    }
+    
+}
+// ヘッダーここまで
+
+
 
 .container {
     background-color: $bgColor;
@@ -77,15 +54,7 @@ $quizcolor:rgba(44, 189, 189, 0.2);
 
 }
 
-header {
-    @include media(s) {
-
-        font-size:14px;
-    
-    }
-   
-}
-
+// メイン
 main {
     padding:100px 0;
     display: flex;
@@ -93,13 +62,12 @@ main {
     height: 3000px;
     width: 100%;
 
+    // メインのレスポンシブ
     @include media(s) {
-
         display: flex;
         flex-direction: column;
         z-index: 1;
         width: 100%;
-
     };
 
 
@@ -114,86 +82,68 @@ main {
         margin:20px 0;
         font-size:16px;
         color:$hcolor
-
-
-
     }
 
+    // 左側
     .left {
-        // ページトップに戻るやつ
-
-        @include media(s) {
-            width: 100%;
-            padding: 0;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-
-            // padding:10px 0;
-        };
-
-               
 
         background-color:$bgColor;
         width: 70%;
         padding:0 40px;
         height:3000px;
 
+        // 左側レスポンシブ
+        @include media(s) {
+            width: 100%;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
         .border {
-
             height:1px;
             background-color: #8F8063;
             width: 100%;
-
-
-
         }
 
         .tx {
             margin:20px;
         }
 
+        // 2分割構成
         .shtx {
             margin:30px 0;
-
             display: flex;
             align-items: center;
 
-            .nextlink1,.nextlink2 {
+            .nextlink1,
+            .nextlink2 {
                 margin:10px;
                 a {
                     text-decoration: none;
                     color:$bgColor
-
                 }
             }
 
+            // 2分割を1分割にするレスポンシブ
             @include media(s) {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-
                 margin:0 10px;
             };
 
        
             
             p {
-                
                 height: 300px;
                 width: 300px;
                 margin:20px 20px;
                 font-size:15px;
-
                 @include media(s) {
                     width: 100%;
                 };
-    
-        
-                
             }
         }
         
@@ -201,14 +151,16 @@ main {
             height: 300px;
             width: 65%;
             margin:10px ;
-
             object-fit: contain;
             border:solid $bordercolor 2px;
+            
             @include media(s) {
                 margin:10px ;
             };
-
         }
+
+
+        // クイズ画面
         .quiz {
             padding:20px 20px;
             background-color:#8F8063;
@@ -216,9 +168,8 @@ main {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            // align-items: center;
             color:black;
-            
+            // クイズ画面のレスポンシブ
             @include media(s) {
                 display: flex;
                 flex-direction: column;
@@ -226,59 +177,46 @@ main {
                 margin:10px;
                 width: 87%;
                 height:auto;
-    
-                // padding:10px 0;
             };
     
 
-        .answer {
-            height:400px;
-            width: 80%;
-            background-color: $quizcolor;
-            border:solid black 2px;
-            display: flex;
-            align-items: center;
-            @include media(s) {
-                margin:10px 0;
-                width: 99%;
-            };
-
-            
+            // 解答画面
+            .answer {
+                height:400px;
+                width: 80%;
+                background-color: $quizcolor;
+                border:solid black 2px;
+                display: flex;
+                align-items: center;
+                @include media(s) {
+                    margin:10px 0;
+                    width: 99%;
+                };
+            }
         }
-    }
 
 
     }
 
 
-
+    // 右側
     .right {
 
+        margin:1px;
+        height: 1000px;
+        width: 100%;
+        right: 0;
+        width: 30%;   
+        background-color:rgb(255, 255, 255);   
+
+        // 右側レスポンシブ
         @include media(s) {
 
             margin-top:100px;
             width: 100%;
         };
     
-
-        
-        margin:1px;
-        // position: fixed;
-        height: 1000px;
-        width: 100%;
-        right: 0;
-        // top:100px;
-
-        width: 30%;   
-        background-color:rgb(255, 255, 255);   
-
-
-
-
-
-
         .twitter-timeline {
-
             margin:20px;
         }
 
@@ -287,11 +225,7 @@ main {
             width: 100%;
             background-color:rgb(255, 255, 255);
 
-
             li {
-                
-               
-                
                 @mixin a($bgColor, $textColor) {
                     color: $textColor;
                     padding: 5px 10px;
@@ -312,6 +246,7 @@ main {
                 &:hover {
                     background-color:rgb(216, 200, 176);
 
+                    // 最初のliのやつだけホバーしても色変わらない
                     &:nth-child(1) {
                         background-color:rgb(255, 255, 255);
                     }
@@ -328,8 +263,6 @@ main {
                     padding: 10px;
                     object-fit: cover;
                 }
-
-                
                 
                 a {
                     padding:20px 10px;
@@ -341,87 +274,23 @@ main {
             }
         }
 
-
     }
 
-
 }
 
 
 
 
-// ツールチップ
-.tooltip {
-    margin: 100px 0 0;
-    list-style: none;
-    li {
-        margin: 0 10px;
-        float: left;
-        position: relative;
-        text-align: center;
-      }
-      a {
-        padding: 14px 10px;
-        display: block;
-        text-decoration: none;
-        font-weight: bold;
-        width: 180px;
-      }
-      li span {
-        background: #ffc;
-        border: 1px solid #fc6;
-        height: 45px;
-        position: absolute;
-        top: -85px;
-        left: 0;
-        text-align: center;
-        padding: 20px 12px 10px;
-        z-index: 2;
-        display: none;
-      }
-}
-
-.pageTop {
-    height: 100px;
-    width: 100px;
-    background: red;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
-
-}
-
-
-
-
+// チェックボックス
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-/*Page styles*/
-// html { height: 100%; }
-
-// body {
-//   height: 100%;
-//   margin: 0;
-//   background: #363636;
-//   display: -webkit-flex;
-//   display: flex;
-//   align-items: center;
-// }
-
-.boxes1,.boxes2 {
-  margin: auto;
-  padding: 50px;
-  background: #484848;
+.boxes1,
+.boxes2,
+.boxes3 {
+    margin: auto;
+    padding: 50px;
+    background: #484848;
 }
-
-
-
-
-
-
-
-
 
 /*Checkboxes styles*/
 input[type="radio"] { display: none; }
