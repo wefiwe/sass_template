@@ -1,5 +1,4 @@
 header {
-    margin-top:-16px;
     position: fixed;
     height: 100px;
     width: 100%;
@@ -9,9 +8,16 @@ header {
 
     p {
         color: white;
-        margin-left:20px;
-        font-weight: bold;
-        font-family: 'Chalkduster',sans-serif;
+        margin: {
+            left:20px; 
+            top: 20px;
+        }
+        
+        font: {
+            weight: bold;
+            family: fantasy;
+            size: 60px;
+        }
     }
     
     ul {
@@ -34,8 +40,6 @@ header {
         
         &:hover {
             background-color: black;
-            
-
         }
     }
 
@@ -51,7 +55,7 @@ header {
         text-decoration: none;
         color:white;
         padding:20px 5px;
-        font-family: 'Chalkduster',sans-serif;
+        font-family: fantasy;
 
         &:hover {
             color: rgb(0, 0, 0);
