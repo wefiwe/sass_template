@@ -4,7 +4,22 @@
 
 @import "../modules/**";
 
+// レスポンシブ
+$breakpoints: (
+    xs: "only screen and (max-width: 320px)",
+    s: "only screen and (max-width: 575px)",
+    m: "only screen and (max-width: 768px)",
+    l: "only screen and (max-width: 991px)",
+    xl: "only screen and (max-width: 1199px)",
+);
 
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+// main
 @mixin h2($h2color) {
     // box-shadow: 0 0 8px (rgb(0, 255, 255);
     // background-color:#fff;
@@ -15,10 +30,12 @@
     text-shadow: 1px 1px 0 #fff, 3px 3px 0 #999;
     font-size: 35px;
 }
+
 body {
     // background-color: darken(grey,5%);
     background-image: url(../../img/Best-Cool-Justin-Bieber-Wallpaper-HD.jpg);
 }
+
 
 .main {
     margin: 0 auto;
@@ -35,9 +52,37 @@ body {
         font-family: segoe script;
         margin: 20px 0 ;
         line-height: 1.5;
+        animation:  fuwafuwa 4s infinite linear alternate;
         span {
             color: yellow;
         }
+    }
+}
+
+@keyframes fuwafuwa {
+0% {transform:translate(0, 0) rotate(-2deg);}
+50% {transform:translate(0, -1px) rotate(0deg);}
+100% {transform:translate(0, 0)rotate(2deg);}
+}
+// レスポンシブ
+@include media(m) {
+    .main {
+        margin: none; 
+    };
+    .img img {
+        padding-left: none;
+    };
+    .video {
+        margin: 0;
+    }
+    .container {
+        margin-left: 220px;
+    }
+    header ul {
+        background-color: transparent;
+    }
+    .space {
+        margin-bottom: 30px;
     }
 }
 .img img {
@@ -57,6 +102,8 @@ body {
     margin: 0 auto;
     width: 600px;
 }
+
+// hair
 .container h1 {
     @include h2(rgba(51, 238, 66, 0.705));
     text-align: center;
@@ -70,4 +117,5 @@ body {
 }
 .card-size {
     height: 300px;
+    
 }
