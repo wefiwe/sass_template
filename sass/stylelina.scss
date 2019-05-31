@@ -201,13 +201,21 @@ main {
 
     // 右側
     .right {
+        @mixin a($bgColor, $textColor) {
+            color: $textColor;
+            padding: 5px 10px;
+            background-color: $bgColor;
+        }
+
+
+        @include a(rgb(255, 255, 255), black);
 
         margin:1px;
         height: 1000px;
         width: 100%;
         right: 0;
         width: 30%;   
-        background-color:rgb(255, 255, 255);   
+        // background-color:rgb(255, 255, 255);   
 
         // 右側レスポンシブ
         @include media(s) {
@@ -222,15 +230,11 @@ main {
 
 
         ul {
+
             width: 100%;
             background-color:rgb(255, 255, 255);
 
             li {
-                @mixin a($bgColor, $textColor) {
-                    color: $textColor;
-                    padding: 5px 10px;
-                    background-color: $bgColor;
-                }
 
                 @include a(rgb(255, 255, 255), black);
 
@@ -277,6 +281,7 @@ main {
     }
 
 }
+
 
 
 
