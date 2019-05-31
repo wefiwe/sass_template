@@ -42,22 +42,11 @@
         left: 0;
         right: 0;
         bottom: 0;
-        // height: 300px;
-        // width: 300px;
         opacity: 0;
         overflow: visible;
         border: 0px solid rgba(255, 215, 0, 0.7);
         box-sizing: border-box;
         transition: all 0.4s ease-in-out;
-    }
-   
-    a .caption{
-        position: relative;
-        top: -10px;
-        opacity: 0;
-        transform: scale(0,0);
-        transition: transform 0.2s ease-in, opacity 0.1s ease-in-out;
-
     }
 
     &:hover .mask{
@@ -67,11 +56,8 @@
         font-weight: bold;
     }
 
-    &:hover a .caption{
-        opacity: 1;
-        transform: scale(0,0);
-        transition-delay: 0.3s;
-        right: 20px;
+    .caption{
+        margin-left: -10px;
     }
 }
 
@@ -80,39 +66,26 @@
 
     .small-mask{
         position: absolute;
-        top: 0;
+        top: 50px;
         left: 0;
         right: 0;
         bottom: 0;
-        // height: 300px;
-        // width: 300px;
         opacity: 0;
         overflow: visible;
         border: 0px solid rgba(100, 200, 100, 0.7);
         box-sizing: border-box;
         transition: all 0.4s ease-in-out;
+        height: 100px;
     }
    
-    a .caption{
-        position: relative;
-        top: -10px;
-        opacity: 0;
-        transform: scale(0,0);
-        transition: transform 0.2s ease-in, opacity 0.1s ease-in-out;
-    }
 
     &:hover .small-mask{
         opacity: 1;
-        border: 150px solid rgba(106, 216, 78, 0.7);
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    &:hover a .caption{
-        opacity: 1;
-        transform: scale(0,0);
-        transition-delay: 0.3s;
-        right: 20px;
+        border: 105px solid rgba(106, 216, 78, 0.7);
+        font: {
+            size: 20px;
+            weight: bold; 
+        }
     }
 }
 
