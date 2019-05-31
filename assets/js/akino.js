@@ -1,19 +1,20 @@
-$(function () {
+// $(function () {
   
-    $("input[name = 'is']").on("change", function() {
-        
-        let changeBtn = $(this).prop("disabled");
-
-        if(changeBtn) {
-            $(".checkbtn").prop("disabled", false);
-            console.log("AAA")
-        } else{
-            $(".checkbtn").prop("disabled", true);
-        }
-        
-    })
-
+//     $("input[name='prop']").on("change", function() {
     
+//         let prop = $("input[name='prop']").prop("disabled");
 
+//         if(prop) {
+//             $("#checkBtn").prop("disabled", true);
+//         } else{
+//             $("#checkBtn").prop("disabled", true);
+//         }
+        
+//     })
+// })
 
+$(function () {
+    $("#check-box").on("change", function () {
+        $(".check-btn").prop("disabled", false);
+    })
 })
