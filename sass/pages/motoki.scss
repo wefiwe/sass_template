@@ -68,12 +68,23 @@ main{
 
     .photo{
         // float: left;
-        padding: 80px;
+        
+        padding: 100px;
         width: 450px;
         height: 600px;
     }
 
     .text{
+
+        h2{
+            color: $baseColor;
+            font-size: 25px;
+            padding: 30px;
+            font-family: 'Chalkduster',sans-serif;
+            border-bottom: solid 2px;
+            border-image: linear-gradient(to right, red 0%, blue 100%);
+            border-image-slice: 1;
+        }
         
         // background: linear-gradient(purple, blue);
         p{
